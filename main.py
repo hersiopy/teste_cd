@@ -11,7 +11,7 @@ pasta = os.path.abspath('index.html')
 
 print('pasta1:'+pasta)
 pasta = pasta.replace(chr(92), chr(47)+chr(47))
-pasta = pasta.replace('index.html', 'teste_cd-1//upload')
+pasta = pasta.replace('index.html', 'upload')
 print('pasta2:'+pasta)
 DIRETORIO = pasta
 # parametros = pasta+/upload
