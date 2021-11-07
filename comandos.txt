@@ -5,6 +5,9 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
+
+#esse só na primeira vez
+
 git remote add origin https://github.com/hersiopy/teste_cd.git
 git push -u origin main
 
