@@ -4,11 +4,13 @@ echo "# teste_cd" >> README.md
 git init
 git add README.md
 git commit -m "teste upload"
+
+
+#esses só na primeira vez
 git branch -m main
-
-#esse só na primeira vez
-
 git remote add origin https://github.com/hersiopy/teste_cd.git
+
+
 git push -u origin main
 
 
