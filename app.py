@@ -21,4 +21,8 @@ def index():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+
+    # para rodar local, abaixo
+    #app.run(host='0.0.0.0', port=port)
+    # rodar no server
+    server(app, host='0.0.0.0', port=port)

@@ -25,14 +25,14 @@ def lista_arquivos():
         if(os.path.isfile(endereco_do_arquivo)):
             arquivos.append(nome_do_arquivo)
 
-    return "Entrou get1"
-    # return jsonify(arquivos)
+    # return "Entrou get1"
+    return jsonify(arquivos)
 
 
 @api.route("/arquivos/<nome_do_arquivo>",  methods=["GET"])
 def get_arquivo(nome_do_arquivo):
-    return "Entrou get2"
-    # return send_from_directory(DIRETORIO, nome_do_arquivo, as_attachment=True)
+    # return "Entrou get2"
+    return send_from_directory(DIRETORIO, nome_do_arquivo, as_attachment=True)
 
 
 @api.route("/arquivos", methods=["POST"])
@@ -43,9 +43,8 @@ def post_arquivo():
     nome_do_arquivo = arquivo.filename
     arquivo.save(os.path.join(DIRETORIO, nome_do_arquivo))
 
-    return "Post"
-
-    # return '', 201
+    # return "Post"
+    return '', 201
 
 
 if __name__ == "__main__":
