@@ -5,8 +5,6 @@ from flask import Flask, request, jsonify, send_from_directory
 #DIRETORIO = ".\\upload"
 
 api = Flask(__name__)
-
-
 pasta = os.path.abspath('index.html')
 
 print('pasta1:'+pasta)
@@ -28,13 +26,13 @@ def lista_arquivos():
             arquivos.append(nome_do_arquivo)
 
     return "Entrou get1"
-    return jsonify(arquivos)
+    # return jsonify(arquivos)
 
 
 @api.route("/arquivos/<nome_do_arquivo>",  methods=["GET"])
 def get_arquivo(nome_do_arquivo):
-    return send_from_directory(DIRETORIO, nome_do_arquivo, as_attachment=True)
     return "Entrou get2"
+    # return send_from_directory(DIRETORIO, nome_do_arquivo, as_attachment=True)
 
 
 @api.route("/arquivos", methods=["POST"])
@@ -47,7 +45,7 @@ def post_arquivo():
 
     return "Post"
 
-    return '', 201
+    # return '', 201
 
 
 if __name__ == "__main__":
