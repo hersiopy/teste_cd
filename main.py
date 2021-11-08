@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, render_template
 
 #DIRETORIO = "E:\\DOCS\\Python\\vscode\\flask\\api_flask\\Teste_CD\\teste_cd-1\\upload"
 #DIRETORIO = ".\\upload"
@@ -13,6 +13,11 @@ pasta = pasta.replace('index.html', 'upload')
 print('pasta2:'+pasta)
 DIRETORIO = pasta
 # parametros = pasta+/upload
+
+
+@api.route("/arquivos", methods=["GET"])
+def index():
+    return render_template('index.html')
 
 
 @api.route("/arquivos", methods=["GET"])
