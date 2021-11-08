@@ -3,8 +3,8 @@ botao direito bash
 echo "# teste_cd" >> README.md
 git init
 git add README.md
-git commit -m "first commit"
-git branch -M main
+git commit -m "teste upload"
+git branch -m main
 
 #esse só na primeira vez
 
@@ -13,3 +13,9 @@ git push -u origin main
 
 
 sair, esc + :qa!
+
+
+
+heroku:
+Log de erros:
+logs --tail -a teste-cd-flask-hersio
